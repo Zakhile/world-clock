@@ -1,3 +1,4 @@
+/* Basic body styling */
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f2f2f2;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Main container for the application */
 .container {
   max-width: 900px;
   margin: 80px auto 20px auto;
@@ -15,12 +17,14 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header title styling */
 .title {
   text-align: center;
   font-size: 40px;
   margin-bottom: 10px;
 }
 
+/* Header description styling */
 .description {
   text-align: center;
   font-size: 18px;
@@ -28,17 +32,20 @@ body {
   margin-bottom: 20px;
 }
 
+/* City selector section styling */
 .city-selector {
   margin: 20px 0;
   text-align: center;
 }
 
+/* Label for the city selector */
 .city-selector label {
   margin-right: 10px;
   font-weight: 500;
   font-size: 16px;
 }
 
+/* Dropdown select element styling */
 select {
   padding: 8px;
   font-size: 16px;
@@ -47,6 +54,7 @@ select {
   min-width: 180px;
 }
 
+/* Container for all clock cards */
 .clocks {
   display: flex;
   flex-wrap: wrap;
@@ -55,6 +63,7 @@ select {
   margin-top: 20px;
 }
 
+/* Individual clock card styling */
 .clock-card {
   display: flex;
   justify-content: space-between;
@@ -67,36 +76,67 @@ select {
   margin: 0 auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #ffffff;
+  position: relative;
 }
 
+/* Clock information section styling */
 .clock-info {
   display: flex;
   flex-direction: column;
 }
 
+/* City name styling */
 .city-name {
   font-size: 22px;
   margin: 0;
   font-weight: bold;
 }
 
+/* Date display styling */
 .date {
   font-size: 16px;
   color: #e0e0e0;
 }
 
+/* Time display styling */
 .time {
   font-size: 30px;
   font-weight: bold;
   white-space: nowrap;
 }
 
+/* Small text within time (e.g., AM/PM) */
 .time small {
   font-size: 16px;
   font-weight: normal;
   color: #e0e0e0;
 }
 
+/* Remove clock button styling */
+.remove-clock-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.remove-clock-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer styling */
 .footer {
   margin-top: 40px;
   font-size: 14px;
@@ -104,11 +144,13 @@ select {
   color: #777;
 }
 
+/* Footer link styling */
 .footer a {
   color: #4e71ff;
   text-decoration: none;
 }
 
+/* Footer link hover effect */
 .footer a:hover {
   text-decoration: underline;
 }
