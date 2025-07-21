@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
+
     <link rel="stylesheet" href="css/index.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,21 +33,37 @@
           </select>
         </section>
 
-        <section class="clocks">
-          <div class="clock-card">
+        <section class="clocks" id="clocks-container">
+          <div
+            class="clock-card"
+            id="centurion-clock"
+            data-city-id="centurion"
+            data-timezone="Africa/Johannesburg">
             <div class="clock-info">
               <h2 class="city-name">Centurion</h2>
-              <div class="date">21 Jul 2025</div>
+              <div class="date"></div>
             </div>
-            <div class="time">07:10:05 <small>AM</small></div>
+            <div class="time"></div>
+
+            <button class="remove-clock-btn" data-city-id="centurion">
+              &times;
+            </button>
           </div>
 
-          <div class="clock-card">
+          <div
+            class="clock-card"
+            id="johannesburg-clock"
+            data-city-id="johannesburg"
+            data-timezone="Africa/Johannesburg">
             <div class="clock-info">
               <h2 class="city-name">Johannesburg</h2>
-              <div class="date">21 Jul 2025</div>
+              <div class="date"></div>
             </div>
-            <div class="time">07:10:05 <small>AM</small></div>
+            <div class="time"></div>
+
+            <button class="remove-clock-btn" data-city-id="johannesburg">
+              &times;
+            </button>
           </div>
         </section>
       </main>
