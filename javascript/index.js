@@ -64,13 +64,25 @@ function setupInitialClocks() {
 
 // Add new city from dropdown
 function updateCity(event) {
-  const timezone = event.target.value;
-  const name = timezone.includes("/")
-    ? timezone.split("/")[1].replace("_", " ")
-    : timezone;
-  const id = `${timezone.replace(/\//g, "-")}-clock`;
+  let timezone, name, id;
 
-  addClock({ id, timezone, name });
+  if (event.target.value === "current") {
+    // Use moment.tz.guess() to determine the user's timezone
+    timezone = moment.tz.guess();
+    name = "My Location";
+    id = "current-location-clock";
+  } else {
+    timezone = event.target.value;
+    name = timezone.includes("/")
+      ? timezone.split("/")[1].replace("_", " ")
+      : timezone;
+    id = `${timezone.replace(/\//g, "-")}-clock`;
+  }
+
+  // Add the clock if it doesn't already exist
+  if (!document.getElementById(id)) {
+    addClock({ id, timezone, name });
+  }
 }
 
 // Remove clock
