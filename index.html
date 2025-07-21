@@ -3,26 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Css/index.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <title>World Clock</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
   </head>
   <body>
-    <h1>World Clock</h1>
-    <p>
-      Welcome to the World Clock application. This app allows you to view the
-      current time in various cities around the world.
-    </p>
-    <footer>
-      This project is coded by
-      <a href="https://github.com/Zakhile" target="_blank">Ntokozo Zulu</a> and
-      is open-sourced on
-      <a href="https://github.com/Zakhile/world-clock" target="_blank">GitHub</a
-      >. and is hosted on
-      <a href="https://worldclockchecker.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">🌍 World Clock</h1>
+        <p class="description">
+          View the current time and date in various cities around the world.
+        </p>
+      </header>
+
+      <main>
+        <section class="city-selector">
+          <label for="city-select">Choose a city:</label>
+          <select id="city-select">
+            <option value="" disabled selected>Select a city</option>
+            <option value="new-york">New York</option>
+            <option value="london">London</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="sydney">Sydney</option>
+            <option value="cape-town">Cape Town</option>
+          </select>
+        </section>
+
+        <section class="clocks">
+          <div class="clock-card">
+            <h2 class="city-name">Centurion</h2>
+            <div class="date">21 Jul 2025</div>
+            <div class="time">07:10:05 AM</div>
+          </div>
+
+          <div class="clock-card">
+            <h2 class="city-name">Johannesburg</h2>
+            <div class="date">21 Jul 2025</div>
+            <div class="time">07:10:05 AM</div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          This project is coded by
+          <a href="https://github.com/Zakhile" target="_blank">Ntokozo Zulu</a>,
+          is
+          <a href="https://github.com/Zakhile/world-clock" target="_blank"
+            >open-sourced on GitHub</a
+          >, and hosted on
+          <a href="https://worldclockchecker.netlify.app/" target="_blank"
+            >Netlify</a
+          >.
+        </p>
+      </footer>
+    </div>
+
     <script src="javascript/index.js"></script>
   </body>
 </html>
