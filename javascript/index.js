@@ -1,13 +1,25 @@
-// JavaScript code to update the world clock for Centurion
-let centurionElement = document.getElementById("centurion-clock");
-let centurionDateElement = centurionElement.querySelector(".date");
-let centurionTimeElement = centurionElement.querySelector(".time");
-centurionTimeElement.innerHTML = "07:10:05 <small>AM</small>"; // Example static time
-centurionDateElement.textContent = "21 Jul 2025"; // Example static date
+// function to update the time
 
-// JavaScript code to update the world clock for Johannesburg
-let johannesburgElement = document.getElementById("johannesburg-clock");
-let johannesburgDateElement = johannesburgElement.querySelector(".date");
-let johannesburgTimeElement = johannesburgElement.querySelector(".time");
-johannesburgTimeElement.innerHTML = "07:10:05 <small>AM</small>"; // Example static time
-johannesburgDateElement.textContent = "21 Jul 2025"; // Example static date
+function updateTime() {
+  let centurionElement = document.getElementById("centurion-clock");
+  let centurionTimeElement = centurionElement.querySelector(".time");
+  let centurionDateElement = centurionElement.querySelector(".date");
+  let centurionTime = moment().tz("Africa/Johannesburg");
+  centurionDateElement.innerHTML = centurionTime.format("DD MMM YYYY");
+  centurionTimeElement.innerHTML = centurionTime.format(
+    "hh:mm:ss[<small>]A[</small>]"
+  );
+
+  //
+  let moscowElement = document.getElementById("moscow-clock");
+  let moscowTimeElement = moscowElement.querySelector(".time");
+  let moscowDateElement = moscowElement.querySelector(".date");
+  let moscowTime = moment().tz("Europe/Moscow");
+  moscowDateElement.innerHTML = moscowTime.format("DD MMM YYYY");
+  moscowTimeElement.innerHTML = moscowTime.format(
+    "hh:mm:ss[<small>]A[</small>]"
+  );
+}
+
+updateTime();
+setInterval(updateTime, 1000);
